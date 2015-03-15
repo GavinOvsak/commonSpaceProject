@@ -24,7 +24,7 @@ var server = https.createServer(options, app);
 var io = require('socket.io')(server);
 // io.set('log level', 1);
 // io.on('connection', function(){ /* … */ });
-server.listen(2015);
+server.listen((process.env.PORT || 2015));
 
 app.use(express.static(__dirname + '/'));
 //app.use(express.static(__dirname));
