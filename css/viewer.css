@@ -1,0 +1,71 @@
+body {
+	margin:0;
+	padding:0;
+}
+
+.overlay {
+  display: block;
+  position: fixed;
+  font-size: 30px;
+  line-height: 60px;
+  text-decoration: none;
+  z-index: 1000;
+  text-align: center;
+  color: #fff;
+}
+
+.corner-button {
+  width: 60px;
+  height: 60px;
+  background: rgba(0,0,0,0.5);
+  border-radius: 30px;
+}
+
+a, a:hover, a:visited, a:active {
+  color: #fff;
+}
+
+#bottom-right {
+  right: 40px;
+  line-height: 55px;
+  bottom: 40px;
+}
+
+#bottom-left {
+  left: 40px;
+  bottom: 40px;
+}
+
+#top-right {
+  right: 40px;
+  top: 40px;
+}
+
+#top-left {
+  left: 40px;
+  top: 40px;
+}
+
+#right {
+  right: 20px;
+  top: 50%;
+}
+
+#top-info {
+  top: 20px;
+  font-size: 25px;
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+#left {
+  position: fixed;
+  left: 20px;
+  font-size: 30px;
+  top: 50%;
+  line-height: 40px;
+  z-index: 1000;
+  text-align: center;
+  color: #fff;
+}

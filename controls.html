@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name='keywords' content='WebRTC, HTML5, JavaScript' />
+<meta name='description' content='WebRTC Reference App' />
+<meta name='viewport' content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1'>
+
+<base target='_blank'>
+
+<title>Streaming Broadcaster</title>
+
+<!-- <link rel='stylesheet' href='css/main.css' /> -->
+
+</head>
+
+<body>
+
+<div id='container'>
+
+<h1>Common Space Test Controls</h1>
+<h2>Current Status: <span id="status">Waiting for viewer</span></h2>
+<!--
+
+Status Options:
+- Waiting for viewer. Please open /viewer.html on a mobile phone.
+- In focus, use AWSD keys for motion
+- Out of focus, no keyboard controls possible
+
+Show portal, background dropdown, exit button
+
+	-->
+
+<h3> Choose Audio Source </h3>
+
+<select id="audioSource">
+</select>
+
+<h3> Choose Background </h3>
+
+<select id="background">
+  <option value="common">Common Room</option>
+  <option value="sky">Isolated - New York Flight</option>
+  <option value="beach">Isolated - Australia Beach</option>
+</select>
+<br>
+<h3> Mouse Portal </h3>
+
+<img id="portal" src="./images/portal.png"></img>
+<br>
+
+<button id="screen">Change Screen Share</button>
+<button id="exit">Exit Room</button>
+
+<div id="audioList"></div>
+
+<h3 id="viewerInfo"></h3>
+
+</div>
+
+<script src="js/lib/jquery-2.1.1.js"></script>
+<script src="js/lib/getScreenId.js"></script>
+<script src='/socket.io/socket.io.js'></script>
+<script src='js/lib/adapter.js'></script>
+<script src='js/RTC.js'></script>
+<script src='js/controls.js'></script>
+
+</body>
+</html>

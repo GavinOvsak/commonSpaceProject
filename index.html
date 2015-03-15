@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name='keywords' content='WebRTC, HTML5, JavaScript' />
+<meta name='description' content='WebRTC Reference App' />
+<meta name='viewport' content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1'>
+
+<base target='_blank'>
+
+<title>Common Space Test</title>
+
+<!-- <link rel='stylesheet' href='css/main.css' /> -->
+
+</head>
+
+<body>
+
+<div id='container'>
+
+<h2>Welcome to Common Space Test! Let's try to get multiple people in the same virtual room together to collaborate.</h2>
+
+<h3>Your Username</h3>
+<input id="username" type="text" placeholder="Username" value="GavinOvsak"></input>
+<h3>Room Name</h3>
+<input id="roomName" type="text" value="Test Room"></input>
+<br><br>
+
+<button id="choose">Enter Room</button>
+
+</div>
+
+<script src="js/lib/jquery-2.1.1.js"></script>
+<script src='/socket.io/socket.io.js'></script>
+<script src='js/lib/adapter.js'></script>
+
+<script>
+$(document).ready(function() {
+
+var windowObjectReference;
+var strWindowFeatures = "menubar=yes,location=yes,toolbar=yes, scrollbars=yes, resizable=yes, width=400, height=400";
+//top=500, left=500, 
+
+var openControls = function(username, roomName) {
+  windowObjectReference = window.open("/controls.html?user=" + username + "&room=" + roomName, "_blank", strWindowFeatures);
+}
+
+$('#choose').click(function() {
+
+	var username = $('#username').val();
+	var roomName = $('#roomName').val();
+
+	//check if username and room name have values.
+	if (username != '' && roomName != '') {
+		openControls(username, roomName);
+	}
+});
+
+});
+
+</script>
+
+</body>
+</html>

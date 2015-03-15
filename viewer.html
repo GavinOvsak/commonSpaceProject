@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta name="keywords" content="JavaScript, WebRTC" />
+<meta name="description" content="WebRTC codelab" />
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1">
+<script src="js/lib/jquery-2.1.1.js"></script>
+<script src='/js/lib/adapter.js'></script>
+<script src='/js/lib/three.min.js'></script>
+<script src='/js/lib/StereoEffect.js'></script>
+<script src='/js/lib/TrackballControls.js'></script>
+<script src='/js/lib/OrbitControls.js'></script>
+<script src='/js/lib/DeviceOrientationControls.js'></script>
+<script src='/socket.io/socket.io.js'></script>
+<script src='js/RTC.js'></script>
+
+<!-- <link rel="stylesheet" href="/css/bootstrap.min.css"> -->
+
+<title>Theta View</title>
+<style src="viewer.css"></style>
+
+</head>
+
+<body>
+
+<div id="view"></div>
+<div id="viewer"/>
+<video autoplay style="display:none;" id="remoteVideo"></video><!-- style="display:none;"  -->
+
+<!-- file://localhost/Users/Gavin/staticstoregavin/static/img/LittlStarVids/30b705f06aea11e4b551a56065092b42_rf25.mp4 -->
+<!-- 30b705f06aea11e4b551a56065092b42_rf25.mp4
+  https://localhost:2015/images/TrimmedQuidditch4.mp4
+ -->
+<video width="400px" height="300px" id="vid1" src="https://localhost:2015/images/30b705f06aea11e4b551a56065092b42_rf25.mp4" controls autoplay muted loop style="display:none;" ></video> <!--  -->
+<!-- <video width="400px" height="300px" id="vid1" src="http://staticstoregavin.appspot.com/img/LittlStarVids/30b705f06aea11e4b551a56065092b42_rf25.mp4" controls autoplay loop 
+></video> -->
+<script src='js/viewer-init.js'></script>
+<script src='js/viewer-3d.js'></script>
+<script src='js/viewer-mouse.js'></script>
+<script src='js/viewer-keys.js'></script>
+
+</body>
+
+</html>
